@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>FoodApp-Admin</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-light bg-light">
+          <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">FoodApp-Admin</span>
+            <button id="google" type="button" class="btn btn-primary">Login via Google</button>
+            <div id="userCred">
+                <img id="userimg" alt="" width="50" height="50" style="border-radius: 50%"/>
+                <button id="logout" type="button" class="btn btn-outline-primary">Logout</button>
+            </div>
+          </div>
+        </nav>
+        
+        <div id="content" class="container">
+            <button id="btnNewFood" type="button" class="btn btn-success">New</button>
+        
+        <div id="data" class="table responsive">
+            <table id="tableData" class="table table-hover" border="0">
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Availability</th>
+                    <th>Image Url</th>
+                </tr>
+                
+            </table>
+        </div>
+        
+        
+        <div id="newFood">
+            <div class="card text-dark mx-auto mt-4" style="max-width: 18rem;">
+              <div class="card-header">New Food</div>
+              <div class="card-body">
+                <h5 class="card-title">Food Details</h5>
+                <div class="mb-3">
+                  <label for="foodName" class="form-label">Food Name</label>
+                  <input type="text" class="form-control" id="foodName" placeholder="Name" />
+                </div>
+                
+                <div class="mb-3">
+                  <label for="price" class="form-label">Price</label>
+                  <input type="number" class="form-control" id="price" placeholder="0.00">
+                </div>
+                
+                <div class="mb-3">
+                  <label for="fileimg" class="form-label">Image</label>
+                  <input class="form-control form-control-sm" id="fileimg" type="file">
+                </div>
+                <button id="save" type="button" class="btn btn-success">Save</button>
+                <button id="btnClose" class="btn btn-outline-warning" type="button">Cancel</button>
+              </div>
+            </div>
+        </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+      <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+    
+      <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    
+    
+      <!-- Add Firebase products that you want to use -->
+      <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-storage.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+
+        <script src="./js/config.js" type="text/javascript" charset="utf-8"></script>
+        <script src="./js/auth.js" type="text/javascript" charset="utf-8"></script>
+        <script src="./js/functions.js" type="text/javascript" charset="utf-8"></script>
+        <script src="./js/app.js" type="text/javascript" charset="utf-8"></script>
+    </body>
+</html>
